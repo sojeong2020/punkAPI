@@ -1,0 +1,22 @@
+form{
+    margin:20px;
+}
+.field input, .field select{
+   width:100%;
+   flex-grow:1;
+}
+ .field{
+    width:100%;
+    display:flex;
+    margin-bottom: 20px;
+} 
+label{
+margin-right:20px;
+width:120px;
+}
+
+
+.btn{
+    margin-top:10px;
+    float:right;
+}

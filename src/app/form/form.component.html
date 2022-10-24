@@ -1,0 +1,29 @@
+<p>form works!</p>
+<form [formGroup]="profileForm" (ngSubmit)="submit()">
+    <div>
+    <div class="field">
+        <label for="title">Title</label>
+        <select formControlName="title">
+            <option value="">---select an option--</option>
+            <option *ngFor=" let beer of beers" [value]="beer.name">{{beer.name}}</option>
+        </select>
+    </div>
+    <div class="field">
+        <label for="first name">First name</label>
+        <input type="text" placeholder="First name" formControlName="firstname">
+    </div>
+    <div class="field">
+        <label for="last name">Last name</label>
+        <input type="text" placeholder="Last name" formControlName="lastname">
+    </div>
+    <div class="error" *ngIf="profileForm.touched && profileForm.status == 'INVALID'">
+    <p>Last name is mandatory</p>
+    </div>
+    <div>
+        <input type="checkbox" formControlName="termsAccepted"> <span>I accept the terms</span>
+    </div>
+    <div class="btn">
+        <button type="submit" [disabled]="profileForm.value.termsAccepted ? false: true" >Submit</button>
+    </div>
+ </div>
+</form>

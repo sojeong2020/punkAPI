@@ -1,0 +1,24 @@
+<h1>More About</h1>
+
+<ng-container *ngIf="beer">
+<div class="container">
+ <div  class="card">
+    <div class="img">
+        <img [src]="beer.image_url" />
+    </div>
+    <div class="card-title">
+        <p>{{beer.name}}</p>
+    </div>
+    <div class="card-content">
+        <p>{{beer.volume.value}} {{beer.volume.unit}}</p>
+        <p>{{beer.image_url}}</p>
+        <p>{{beer.food_pairing}}</p>
+    </div>
+</div>   
+</div>
+</ng-container>
+
+
+
+
+<!-- <button type="button" (click)="goBack()">Go Back</button> -->
