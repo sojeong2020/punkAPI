@@ -12,7 +12,7 @@ import { DataService } from '../data.service';
 })
 export class ProductionDetailComponent implements OnInit {
 
-  beer: Production | undefined;
+  beer?: Production;
 
   constructor(
     private route: ActivatedRoute,

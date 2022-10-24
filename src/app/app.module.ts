@@ -11,7 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { ProductionMoreComponent } from './production-more/production-more.component';
+//import { ProductionMoreComponent } from './production-more/production-more.component';
 import { FormComponent } from './form/form.component';
 
 @NgModule({
@@ -19,7 +19,6 @@ import { FormComponent } from './form/form.component';
     AppComponent,
     PoductionsComponent,
     ProductionDetailComponent,
-    ProductionMoreComponent,
     FormComponent
   ],
   imports: [
