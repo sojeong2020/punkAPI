@@ -1,27 +1,31 @@
-# AjAngular
+# PUNK API Angular practice
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
+https://punkapi.com/documentation/v2
 
-## Development server
+Get Beers
+Gets beers from the api, you can apply several filters using url paramaters, the available options are listed below.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+https://api.punkapi.com/v2/beers
 
-## Code scaffolding
+Get a Single Beer
+Gets a beer from the api using the beers id.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+https://api.punkapi.com/v2/beers/1
+Get Random Beer
 
-## Build
+Get Random Beer
+Gets a random beer from the API, this takes no paramaters.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+https://api.punkapi.com/v2/beers/random
 
-## Running unit tests
+Pagination
+Requests that return multiple items will be limited to 25 results by default. You can access other pages using the ?page paramater, you can also increase the amount of beers returned in each request by changing the ?per_page paramater.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+https://api.punkapi.com/v2/beers?page=2&per_page=80
 
-## Running end-to-end tests
+Parameters
+All parameters are optional and without them the API will just return the beers in ascending order from their ID. Parameters are passed in as a query string and can be chained together.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+If a parameter is passed without a value it will return a 400 error.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+https://api.punkapi.com/v2/beers?brewed_before=11-2012&abv_gt=6
