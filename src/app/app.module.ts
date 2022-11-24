@@ -13,13 +13,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //import { ProductionMoreComponent } from './production-more/production-more.component';
 import { FormComponent } from './form/form.component';
+import { AboutComponent } from './about/about.component';
+import { LoginComponent } from './login/login.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PoductionsComponent,
     ProductionDetailComponent,
-    FormComponent
+    FormComponent,
+    AboutComponent,
+    LoginComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
